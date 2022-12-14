@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicahilosprioridad.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practicahilosprioridad.ThreadController">
    <children>
       <Button fx:id="btnComenzar" layoutX="238.0" layoutY="24.0" mnemonicParsing="false" onAction="#btnComenzar" prefHeight="27.0" prefWidth="125.0" text="Comenzar Carrera">
          <font>
@@ -43,7 +43,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelPrioridadHilo1" layoutX="548.0" layoutY="174.0" prefHeight="27.0" prefWidth="29.0">
+      <Label fx:id="labelPrioridadHilo2" layoutX="548.0" layoutY="174.0" prefHeight="27.0" prefWidth="29.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
@@ -60,7 +60,27 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelPrioridadHilo1" layoutX="549.0" layoutY="263.0" prefHeight="27.0" prefWidth="29.0">
+      <Label fx:id="labelPrioridadHilo3" layoutX="549.0" layoutY="263.0" prefHeight="27.0" prefWidth="29.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="46.0" layoutY="339.0" prefHeight="27.0" prefWidth="109.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="contadorProgressBar1" layoutX="25.0" layoutY="339.0" prefHeight="27.0" prefWidth="109.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="contadorProgressBar2" layoutX="247.0" layoutY="339.0" prefHeight="27.0" prefWidth="109.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="contadorProgressBar3" layoutX="470.0" layoutY="339.0" prefHeight="27.0" prefWidth="109.0">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
