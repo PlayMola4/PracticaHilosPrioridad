@@ -1,26 +1,32 @@
 package com.example.practicahilosprioridad;
 
+import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
+import javafx.scene.control.Slider;
 
 public class Hilos extends Thread {
 
     ProgressBar progressBar;
+    Slider prioridadHilos;
+    double porcentaje;
 
-    public Hilos(ProgressBar progressBar) {
+    public Hilos(ProgressBar progressBar, Slider prioridadHilos) {
         this.progressBar = progressBar;
+        this.prioridadHilos = prioridadHilos;
+        porcentaje = 0;
         System.out.println("[ CREANDO HILO ]: " + getName());
     }
-    double porcentaje = 0;
-
     public void run() {
         while (porcentaje < 1.0) {
             progressBar.setProgress(porcentaje);
-            for(int i = 1; i < 100; i++) {
-                for (int p = 1; p <= 1000; p++) {
-                    if (esPrimo(p) == true) {
-                        porcentaje = porcentaje + 0.01;
-                    }
-                }
+            primosHasta(50000);
+            porcentaje += 0.01;
+        }
+    }
+
+    public void primosHasta(int hasta) {
+        for (int i = 0; i < hasta; i++) {
+            if(esPrimo(i)){
             }
         }
     }

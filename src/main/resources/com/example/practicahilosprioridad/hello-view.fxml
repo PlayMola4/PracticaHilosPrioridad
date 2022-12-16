@@ -14,7 +14,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Slider fx:id="sliderHilo1" blockIncrement="5.0" layoutX="231.0" layoutY="94.0" majorTickUnit="5.0" max="10.0" onDragDetected="#sliderHilo1" showTickLabels="true" />
+      <Slider fx:id="sliderHilo1" blockIncrement="5.0" layoutX="231.0" layoutY="94.0" majorTickUnit="5.0" max="10.0" onDragDetected="#sliderHilo1" showTickLabels="true" showTickMarks="true" />
       <Label layoutX="25.0" layoutY="93.0" text="HILO 1">
          <font>
             <Font name="System Bold" size="14.0" />
