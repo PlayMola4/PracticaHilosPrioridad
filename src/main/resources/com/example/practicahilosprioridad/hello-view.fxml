@@ -85,5 +85,20 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
+      <Label fx:id="labelHilo1Progreso" layoutX="33.0" layoutY="329.0" prefHeight="18.0" prefWidth="94.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelHilo2Progreso" layoutX="255.0" layoutY="329.0" prefHeight="18.0" prefWidth="94.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelHilo3Progreso" layoutX="478.0" layoutY="329.0" prefHeight="18.0" prefWidth="94.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

@@ -44,6 +44,12 @@ public class ThreadController {
     Hilos hilo2;
     Hilos hilo3;
     int contador = 0;
+    @FXML
+    private Label labelHilo1Progreso;
+    @FXML
+    private Label labelHilo2Progreso;
+    @FXML
+    private Label labelHilo3Progreso;
 
     public void initialize() {
         iniciarSlidersPrioridad(sliderHilo1);
@@ -90,17 +96,19 @@ public class ThreadController {
     }
     @FXML
     public void btnComenzar(ActionEvent actionEvent) {
-        hilo1 = new Hilos(progressBarHilo1 , sliderHilo1);
-        hilo2 = new Hilos(progressBarHilo2, sliderHilo2);
-        hilo3 = new Hilos(progressBarHilo3, sliderHilo3);
+        hilo1 = new Hilos(progressBarHilo1 , sliderHilo1, labelHilo1Progreso);
+        hilo2 = new Hilos(progressBarHilo2, sliderHilo2, labelHilo2Progreso);
+        hilo3 = new Hilos(progressBarHilo3, sliderHilo3, labelHilo3Progreso);
 
-        //hilo1.setPriority((int) sliderHilo1.getValue());
-        //hilo2.setPriority((int) sliderHilo2.getValue());
-        //hilo3.setPriority((int) sliderHilo3.getValue());
+        hilo1.setPriority((int) sliderHilo1.getValue());
+        hilo2.setPriority((int) sliderHilo2.getValue());
+        hilo3.setPriority((int) sliderHilo3.getValue());
 
         hilo1.start();
         hilo2.start();
         hilo3.start();
+
+        labelHilo1Progreso.setText(String.valueOf(progressBarHilo1));
     }
     private void iniciarSlidersPrioridad(Slider slider) {
         slider.setShowTickLabels(true);
