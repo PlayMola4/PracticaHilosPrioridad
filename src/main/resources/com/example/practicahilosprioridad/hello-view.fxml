@@ -14,7 +14,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Slider fx:id="sliderHilo1" blockIncrement="5.0" layoutX="231.0" layoutY="94.0" majorTickUnit="5.0" max="10.0" onDragDetected="#sliderHilo1" showTickLabels="true" showTickMarks="true" />
+      <Slider fx:id="sliderHilo1" blockIncrement="5.0" layoutX="231.0" layoutY="84.0" majorTickUnit="5.0" max="10.0" onDragDetected="#sliderHilo1" showTickLabels="true" showTickMarks="true" />
       <Label layoutX="25.0" layoutY="93.0" text="HILO 1">
          <font>
             <Font name="System Bold" size="14.0" />
@@ -96,6 +96,11 @@
          </font>
       </Label>
       <Label fx:id="labelHilo3Progreso" layoutX="478.0" layoutY="329.0" prefHeight="18.0" prefWidth="94.0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelGanador" layoutX="222.0" layoutY="350.0" prefHeight="33.0" prefWidth="161.0" text="GANADOR??">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

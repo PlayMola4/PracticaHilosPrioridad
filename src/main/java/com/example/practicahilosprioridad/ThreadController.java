@@ -50,6 +50,10 @@ public class ThreadController {
     private Label labelHilo2Progreso;
     @FXML
     private Label labelHilo3Progreso;
+    @FXML
+    private Label labelGanador;
+
+    private static boolean ganador = false;
 
     public void initialize() {
         iniciarSlidersPrioridad(sliderHilo1);
@@ -59,6 +63,14 @@ public class ThreadController {
         progressBarHilo1.setProgress(0);
         progressBarHilo2.setProgress(0);
         progressBarHilo3.setProgress(0);
+    }
+
+    public static void mostrarGandor(String nombre, Label labelGanador) {
+        if (ganador == false) {
+            System.out.println(nombre + " ha ganado");
+            labelGanador.setText(nombre + " ha ganado");
+            ganador=true;
+        }
     }
 
     //Cuando movamos el slider el valor se va a mostrar en el Label de Prioridad
@@ -96,9 +108,9 @@ public class ThreadController {
     }
     @FXML
     public void btnComenzar(ActionEvent actionEvent) {
-        hilo1 = new Hilos(progressBarHilo1 , sliderHilo1, labelHilo1Progreso);
-        hilo2 = new Hilos(progressBarHilo2, sliderHilo2, labelHilo2Progreso);
-        hilo3 = new Hilos(progressBarHilo3, sliderHilo3, labelHilo3Progreso);
+        hilo1 = new Hilos(progressBarHilo1 , sliderHilo1, labelHilo1Progreso, labelGanador, "Hilo1");
+        hilo2 = new Hilos(progressBarHilo2, sliderHilo2, labelHilo2Progreso, labelGanador, "Hilo2");
+        hilo3 = new Hilos(progressBarHilo3, sliderHilo3, labelHilo3Progreso, labelGanador, "Hilo3");
 
         hilo1.setPriority((int) sliderHilo1.getValue());
         hilo2.setPriority((int) sliderHilo2.getValue());

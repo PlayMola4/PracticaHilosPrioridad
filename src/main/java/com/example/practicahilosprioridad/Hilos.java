@@ -13,14 +13,31 @@ public class Hilos extends Thread {
 
     Label labelPorcentaje;
 
-    public Hilos(ProgressBar progressBar, Slider prioridadHilos, Label labelPorcentaje) {
+    Label ganador;
+
+    String name;
+
+    public Hilos(ProgressBar progressBar, Slider prioridadHilos, Label labelPorcentaje, Label ganador, String name) {
         this.progressBar = progressBar;
         this.prioridadHilos = prioridadHilos;
         this.labelPorcentaje = labelPorcentaje;
+        this.ganador = ganador;
+        this.name = name;
         porcentaje = 0;
         System.out.println("[ CREANDO HILO ]: " + getName());
     }
     public void run() {
+
+        Platform.runLater(new Runnable() {
+            @Override
+            public void run() {
+                if (porcentaje == 100 || porcentaje == 99) {
+                    System.out.println("El Hilo: " + getName() + " ha ganado");
+                }
+                ThreadController.mostrarGandor(name, ganador);
+            }
+        });
+
         while (porcentaje < 1.0) {
             Platform.runLater(new Runnable() {
                 @Override
@@ -31,7 +48,7 @@ public class Hilos extends Thread {
             });
 
             progressBar.setProgress(porcentaje);
-            primosHasta(50000);
+            primosHasta(5000);
             porcentaje += 0.01;
         }
     }
