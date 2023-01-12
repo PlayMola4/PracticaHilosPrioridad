@@ -100,7 +100,7 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="labelGanador" layoutX="222.0" layoutY="350.0" prefHeight="33.0" prefWidth="161.0" text="GANADOR??">
+      <Label fx:id="labelGanador" layoutX="222.0" layoutY="350.0" prefHeight="33.0" prefWidth="161.0" text="GANADOR??" textAlignment="CENTER">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>

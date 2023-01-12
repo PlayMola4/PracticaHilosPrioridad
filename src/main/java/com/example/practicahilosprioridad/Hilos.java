@@ -48,7 +48,7 @@ public class Hilos extends Thread {
             });
 
             progressBar.setProgress(porcentaje);
-            primosHasta(5000);
+            primosHasta(25000);
             porcentaje += 0.01;
         }
     }
